@@ -33,9 +33,7 @@ const registerUser = asyncHandler(async (req, res) => {
     email,
     password: hashedPassword,
   });
-  // const generateToken = (id) => {
-  //   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "30d" });
-  // };
+
   if (user) {
     res.status(201).json({
       _id: user._id,
